@@ -35,7 +35,7 @@ void printarray(int arr[], int size)
 }
 int main()
 {
-	int arr[] = {64,4,1,41,23,56,45};
+	int arr[] = {77,99,7,5,94,62,4,35,56,21};
 	int n = sizeof(arr)/sizeof(arr[0]);
     int i;
     printf("Unsorted Array: \n");
@@ -43,5 +43,6 @@ int main()
 	selectionSort(arr, n);
 	printf("\nSorted array: \n");
 	printarray(arr, n);
+	printf("\nMade by Himanshu Balani");
 	return 0;
 }
