@@ -48,7 +48,7 @@ if __name__=='__main__':
    print("Linked list before insertion: ", end='')
    printList(head);
    data = 9
-   position = 3;
+   position = 3
    head = insertPos(head, position, data);
    print("Linked list after insertion of 9 at position 3: ", end = '')
    printList(head)
