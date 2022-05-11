@@ -1,38 +1,33 @@
-from sys import maxsize
+class StackUsingArray:
+    def __init__(self):
+        self.stack = []
 
-def createStack():
-	stack = []
-	return stack
+    def push(self, element):
+        self.stack.append(element)
 
-def isEmpty(stack):
-	return len(stack) == 0
+    def pop(self):
+        if(not self.isEmpty()):
+            lastElement = self.stack[-1] 
+            del(self.stack[-1])
+            return lastElement
+        else:
+            return("Stack Already Empty")
 
-def push(stack, item):
-	stack.append(item)
-	print(item + " pushed to stack ")
-	
-def pop(stack):
-	if (isEmpty(stack)):
-		return str(-maxsize -1)
-	
-	return stack.pop()
+    def isEmpty(self):
+        return self.stack == []
 
-def peek(stack):
-	if (isEmpty(stack)):
-		return str(-maxsize -1) 
-	return stack[len(stack) - 1]
+    def printStack(self):
+        return self.stack
 
-def display(stack):
-	return stack
-stack = createStack()
-push(stack, str(10))
-push(stack, str(20))
-push(stack, str(30))
-push(stack, str(40))
-push(stack, str(50))
-push(stack, str(60))
-push(stack, str(70))
-print(pop(stack),"popped from stack")
-print(peek(stack),"is the top element")
-print(display(stack),"is the current stack")
+stack = StackUsingArray()
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.push(40)
+stack.push(50)
+stack.push(60)
+stack.push(70)
+lt = stack.pop()
+print(lt,"popped from stack")
+print(stack.printStack(),"is the current stack")
 print("Made By Himanshu Balani")
